@@ -1,0 +1,50 @@
+
+<!-- <button class="fedex-button fedex-button-orange" (click)="gotoReviews()">Yes</button> -->
+<div class="bac-account container">
+        <!-- <form [formGroup]="detailsForm" (ngSubmit)="onSubmit" novalidate> -->
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="openaccount">
+                <h2>Open a Corporate Account (Pay Via 30 Days Credit Term)</h2>
+                <!-- Responsive Arrow Progress Bar -->
+                <div class="arrow-steps">
+                <div class="step current"></div>
+                <div class="step step2-default"></div>
+                <div class="step"></div>
+                </div>
+                <!-- end Responsive Arrow Progress Bar -->
+                <div class="progressbar-labels">
+                    <div class="labels current">
+                        1. Fill in the form
+                    </div>
+                    <div class="labels disable-mob">
+                        2. Review and Submit
+                    </div>
+                    
+                    <div class="labels disable-mob">
+                        3. Complete your application
+                    </div>
+                </div>
+            </div>
+            <div class="info-text">
+                Please fill in the form in Chinese. All fields are mandatory except optional.
+            </div>
+
+            <!-- CHILD COMPONENT -->
+            <app-contact></app-contact> 
+            <!-- <app-contact [event]="clickedEvent"></app-contact> -->
+            <!-- <app-company (eventClicked)="childEventClicked($event)"></app-company> -->
+            <!-- <div class="review-button">
+                <button class="fedex-button fedex-button-orange" type="submit" (click)="onSubmit()">Continue</button>
+            </div> -->
+            <!-- <app-billing></app-billing>
+            <app-shipping></app-shipping> -->
+<!-- 
+            <div class="review-button">
+                <button class="fedex-button fedex-button-orange" (click)="gotoReviews()">Review</button>
+            </div> -->
+    
+        </div>
+    </div>
+<!-- </form> -->
+</div>

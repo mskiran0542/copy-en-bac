@@ -1,0 +1,494 @@
+<div>
+        <!-- Contact -->
+       <form [formGroup]="billingForm" novalidate>
+       
+           <form [formGroup]="contactForm" novalidate>
+                   <div class="contact-section">
+                       <h3>Contact Information</h3>
+                           <div class="contact-container">
+                               <div class="row">
+                                   <div class="half-width">
+                                       <div class="title-field">
+                                           <mat-form-field>
+                                               <mat-select placeholder="Title" formControlName="titleField">
+                                                   <mat-option value="Mr">Mr</mat-option>
+                                                   <mat-option value="Mrs">Mrs</mat-option>
+                                                   <mat-option value="Miss">Miss</mat-option>
+                                                   <mat-option value="Miss">Ms</mat-option>
+                                               </mat-select>
+                                           </mat-form-field>
+                                           <span class="alertLogin" *ngIf="contactForm.value.titleField==null && contactForm.controls['titleField'].touched">Sorry, this is a required field.</span>
+                                       </div>
+                                       <div class="full-name-field">
+                                           <mat-form-field>
+                                               <input matInput placeholder="Full name (as shown on id)" type="text" formControlName="userName" maxlength="10">
+                                           </mat-form-field>
+                                           <span class="alertLogin" *ngIf="!contactForm.controls['userName'].valid && contactForm.controls['userName'].touched &&contactForm.value.userName!=null">Invalid format/data entry. Please re-enter your information.</span>
+                                           <span class="alertLogin" *ngIf="contactForm.value.userName==null && contactForm.controls['userName'].touched">Sorry, this is a required field.</span>
+                                       </div>
+                                   </div>
+                                   <div class="half-width">
+                                       <div class="position-field">
+                                           <mat-form-field>
+                                               <input matInput placeholder="Position in company" type="text" formControlName="position" maxlength="20">
+                                           </mat-form-field>
+                                           <span class="alertLogin" *ngIf="contactForm.value.position==null && contactForm.controls['position'].touched">Sorry, this is a required field.</span>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                   <div class="half-width">
+                                       <div class="email-field">
+                                           <mat-form-field>
+                                               <!-- <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher"> -->
+                                               <input matInput placeholder="Email" type="email" formControlName="email" maxlength="50">
+                                            </mat-form-field>
+                                           <span class="alertLogin" *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].touched  && contactForm.value.email!=null">Please enter a valid email address.</span>
+                                           <span class="alertLogin" *ngIf="contactForm.value.email==null && contactForm.controls['email'].touched">Please enter a valid email address.</span>
+                                       </div>
+                                   </div>
+                                   <div class="half-width">
+                                       <div class="mobile-number-field help-tooltip">
+                                           <mat-form-field>
+                                               <input matInput placeholder="Mobile number 1" allowPhoneNumber="true" type="text" formControlName="mobileNumber1" maxlength="11">
+                                           </mat-form-field>
+                                           <span class="alertLogin" *ngIf="!contactForm.controls['mobileNumber1'].valid && contactForm.controls['mobileNumber1'].touched &&contactForm.value.mobileNumber1!=null">Please enter the valid phone number.</span>
+                                           <span class="alertLogin" *ngIf="contactForm.value.mobileNumber1==null && contactForm.controls['mobileNumber1'].touched">Please enter the valid phone number.</span>
+                                           <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                                           <div class="help-text">This will be used for credit check, invoicing and billing related SMS message.</div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                   <div class="half-width">
+                                       <div class="city-code-field">
+                                           <mat-form-field>
+                                               <input matInput placeholder="City code-landline number-extension (optional)" allowNumber="true"  type="text" formControlName="landLine" maxlength="19">
+                                           </mat-form-field>
+                                           <span class="alertLogin" *ngIf="!contactForm.controls['landLine'].valid && contactForm.controls['landLine'].touched &&contactForm.value.landLine!=null">Please enter the valid phone number.</span>
+                                           <span class="alertLogin" *ngIf="contactForm.value.landLine==null && contactForm.controls['landLine'].touched">Please enter the valid phone number.</span>
+                                       </div>
+                                   </div>
+                                   <div class="half-width">
+                                       <div class="mobile-number2-field help-tooltip">
+                                           <mat-form-field>
+                                               <input matInput placeholder="Mobile number 2 (optional)" maxlength="11" allowPhoneNumber="true" type="text">
+                                           </mat-form-field>
+           
+                                           <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                                           <div class="help-text">In case you do not have a landline number, please provide another mobile number.</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       
+                       <!-- <button type="submit" (click)="onSubmit()">{{buttonName}}</button> -->
+                   </div>
+                   <!-- Company Details -->
+                   <div class="company-section">
+                       <h3>Company Information</h3>
+                       <div class="company-container">
+                           <mat-form-field>
+                               <input matInput placeholder="Company name in chinese (as shown on the business license document)" maxlength="45" type="text" minlength="2" formControlName="cNameCn">
+                           </mat-form-field>
+                           <span class="alertLogin" *ngIf="!contactForm.controls['cNameCn'].valid && contactForm.controls['cNameCn'].touched &&contactForm.value.cNameCn!=null">Please enter the valid Company Name in Chinese</span>
+                           <span class="alertLogin" *ngIf="contactForm.value.cNameCn==null && contactForm.controls['cNameCn'].touched">Sorry, this is a required field.</span>
+                           <mat-form-field>
+                               <input matInput placeholder="Company name in english (pinyin name when there is no english name)" maxlength="60" type="text" minlength="4" formControlName="cNameEn">
+                           </mat-form-field>
+                           <span class="alertLogin" *ngIf="!contactForm.controls['cNameEn'].valid && contactForm.controls['cNameEn'].touched &&contactForm.value.cNameEn!=null">Please enter the valid Company Name in English</span>
+                           <span class="alertLogin" *ngIf="contactForm.value.cNameEn==null && contactForm.controls['cNameEn'].touched">Sorry, this is a required field.</span>
+                           <div class="taxpayer help-tooltip">
+                             <mat-form-field>
+                                 <input matInput placeholder="Taxpayer identification number/unified social credit code" type="text" formControlName ="taxId">
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['taxId'].valid && contactForm.controls['taxId'].touched &&contactForm.value.taxId!=null">Please enter the valid Taxpayer Identification Number/unified social credit codes</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.taxId==null && contactForm.controls['taxId'].touched">Sorry, this is a required field.</span>
+                             <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                             <div class="help-text">After introducing the “3 in 1 business license”, the original 15-digits business license number is replaced by 18-digits unified social credit code. </div>
+                           </div>
+                           <div class="half-width help-tooltip">
+                             <mat-form-field>
+                               <mat-select placeholder="Type of business LICENCE " formControlName ="businessType">
+                                <mat-option value="Natural Person Sole Corporation (Require legal personal ID)">Natural Person Sole Corporation (Require legal personal ID)</mat-option>
+                    <mat-option value="Registration certificate of local Permanent Representative Office of foreign (region) enterprise">Registration certificate of local Permanent Representative Office of foreign (region) enterprise</mat-option>
+                    <mat-option value="Legal certificate of local institution">Legal certificate of local institution</mat-option>
+                    <mat-option value="Non local enterprise legal person Business license">Non local enterprise legal person Business license</mat-option>
+                    <mat-option value="Logistics company">Logistics company</mat-option>
+                    <mat-option value="Non-logistics company but the scope of business license includes logistics">Non-logistics company but the scope of business license includes logistics</mat-option>
+                    <mat-option value="Sole proprietorship (Require legal personal ID)">Sole proprietorship (Require legal personal ID)</mat-option>
+                    <mat-option value="Individually-owned business (Require legal personal ID)">Individually-owned business (Require legal personal ID)</mat-option>
+                    <mat-option value="Local enterprise legal person business license">Local enterprise legal person business license</mat-option>
+                 
+                               </mat-select>
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['businessType'].valid && contactForm.controls['businessType'].touched &&contactForm.value.businessType!=null">Please enter the type of Business license</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.businessType==null && contactForm.controls['businessType'].touched">Sorry, this is a required field.</span>
+                             <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                             <div class="help-text">Please select the appropriate business license type.</div>
+                           </div>
+                           <div class="half-width help-tooltip">
+                             <mat-form-field>
+                               <mat-select placeholder="Nature of business" formControlName ="businessNature">
+                                 <mat-option value="Freight and Cargo Transportation">Freight and Cargo Transportation</mat-option>
+                                 <mat-option value="Business Services">Business Services</mat-option>
+                                 <mat-option value="Clothing and Furnishings">Clothing and Furnishings</mat-option>
+                                 <mat-option value="Pharmaceuticals and Pharmaceutical Supplies">Pharmaceuticals and Pharmaceutical Supplies</mat-option>
+                                 <mat-option value="Electronics">Electronics</mat-option>
+                                 <mat-option value="Home Furnishings">Home Furnishings</mat-option>
+                                 <mat-option value="Jewelry, Watches, Precious Stones, Precious Metals">Jewelry, Watches, Precious Stones, Precious Metals</mat-option>
+                                 <mat-option value="Plastics Manufacturing">Plastics Manufacturing</mat-option>
+                                 <mat-option value="Toys and Hobby Goods">Toys and Hobby Goods</mat-option>
+                                 <mat-option value="Wholesale Trade">Wholesale Trade</mat-option>
+                                 <mat-option value="Others(Please Specify)">Others(Please Specify)</mat-option>
+                               </mat-select>            
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['businessNature'].valid && contactForm.controls['businessNature'].touched &&contactForm.value.businessNature!=null">Please enter valid company address.</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.businessNature==null && contactForm.controls['businessNature'].touched">Sorry, this is a required field.</span>
+                             <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                             <div class="help-text">Please select the appropriate business license type.</div>
+                           </div>
+                           
+                           <mat-form-field>
+                               <input matInput placeholder="Company address on business license" type="text" formControlName="companyAdr">
+                           </mat-form-field>
+                           <span class="alertLogin" *ngIf="!contactForm.controls['companyAdr'].valid && contactForm.controls['companyAdr'].touched &&contactForm.value.compnayAdr!=null">Please enter valid company address.</span>
+                           <span class="alertLogin" *ngIf="contactForm.value.companyAdr==null && contactForm.controls['companyAdr'].touched">Sorry, this is a required field.</span>
+                           <div class="row">
+                             <div class="small-width province-dropdown">
+                               <mat-form-field>
+                                   <mat-select placeholder="Province" [(value)]="selected">
+                                       <mat-option value="option" disabled>Anhui</mat-option>
+                                       <mat-option value="option" disabled>Beijing</mat-option>
+                                       <mat-option value="option" disabled>Chongqing</mat-option>
+                                       <mat-option value="option" disabled>Fujian</mat-option>
+                                       <mat-option value="option" disabled>Gansu</mat-option>
+                                       <mat-option value="Guangdong" selected>Guangdong</mat-option>
+                                       <mat-option value="option" disabled>Guizhou</mat-option>
+                                       <mat-option value="option" disabled>Hainan</mat-option>
+                                       <mat-option value="option" disabled>Hebei</mat-option>
+                                       <mat-option value="option" disabled>Heilongjiang</mat-option>
+                                       <mat-option value="option" disabled>Henan</mat-option>
+                                       <mat-option value="option" disabled>Hubei</mat-option>
+                                       <mat-option value="option" disabled>Hunan</mat-option>
+                                       <mat-option value="option" disabled>Jiangsu</mat-option>
+                                       <mat-option value="option" disabled>Jiangxi</mat-option>
+                                       <mat-option value="option" disabled>Jilin</mat-option>
+                                       <mat-option value="option" disabled>Liaoning</mat-option>
+                                       <mat-option value="option" disabled>Qinghai</mat-option>
+                                       <mat-option value="option" disabled>Shaanxi</mat-option>
+                                       <mat-option value="option" disabled>Shandong</mat-option>
+                                       <mat-option value="option" disabled>Shanghai</mat-option>
+                                       <mat-option value="option" disabled>Shanxi</mat-option>
+                                       <mat-option value="option" disabled>Sichuan</mat-option>
+                                       <mat-option value="option" disabled>Tianjin</mat-option>
+                                       <mat-option value="option" disabled>Yunnan</mat-option>
+                                       <mat-option value="option" disabled>Zhejiang</mat-option>
+                                       <mat-option value="option" disabled>Other Region</mat-option>
+                                   </mat-select>
+                               </mat-form-field>
+                             </div>
+                             <div class="small-width help-tooltip">
+                               <mat-form-field>
+                                 <input matInput placeholder="City" value="For Guangzhou only" disabled>
+                               </mat-form-field>
+                               <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                               <div class="help-text">This value will be used for credit check, invoicing and billing related SMS message.</div>
+                             </div>
+                             <div class="small-width">
+                               <mat-form-field>
+                                   <input matInput placeholder="Postal code" maxlength="6" allowNumber="true" type="text"  formControlName="postCode1">
+                               </mat-form-field>
+                                 <span class="alertLogin" *ngIf="!contactForm.controls['postCode1'].valid && contactForm.controls['postCode1'].touched &&contactForm.value.postCode1!=null">Please enter the valid Reference ID</span>
+                                 <span class="alertLogin" *ngIf="contactForm.value.postCode1==null && contactForm.controls['postCode1'].touched">Sorry, this is a required field.</span>            
+                             </div>
+                           </div>
+                           <div class="billing-note">
+                             <b>Note: </b>
+                             Billing address is the primary default pickup address
+                           </div>
+                           <div class="billing-address-license">
+                             Billing address is the same as the company address on business license?
+                           </div>
+                 
+                           <mat-radio-group class="example-radio-group" [(ngModel)]="billingOption"  [ngModelOptions]="{standalone: true}">
+                               <mat-radio-button value="1" (click)="setShowbillingOption('yes')">Yes </mat-radio-button>
+                               <mat-radio-button value="2" (click)="setShowbillingOption('no')">No (Please specify the reason)</mat-radio-button>
+                             </mat-radio-group>
+                   
+                           <div class="company-billing" *ngIf="showbillingOption=='no'">
+                             <mat-form-field>
+                               <input matInput placeholder="ENTER REASON" type="text" formControlName="entReason" maxlength="30">
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['entReason'].valid && contactForm.controls['entReason'].touched">Please enter valid reason.</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.entReason==null && contactForm.controls['entReason'].touched">Sorry, this is a required field.</span>
+                             <mat-form-field>
+                               <input matInput placeholder="Billing address" type="text" formControlName="billingAdr">
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['billingAdr'].valid && contactForm.controls['billingAdr'].touched && contactForm.value.billingAdr!=null">Please enter valid billing address.</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.billingAdr==null && contactForm.controls['billingAdr'].touched">Sorry, this is a required field.</span>
+                             <div class="row">
+                               <div class="small-width province-dropdown">
+                                 <mat-form-field>
+                                     <mat-select placeholder="Province" [(value)]="selected" disabled>
+                                         <mat-option value="option" disabled>Anhui</mat-option>
+                                         <mat-option value="option2" disabled>Beijing</mat-option>
+                                         <mat-option value="option" disabled>Chongqing</mat-option>
+                                         <mat-option value="option" disabled>Fujian</mat-option>
+                                         <mat-option value="option" disabled>Gansu</mat-option>
+                                         <mat-option value="Guangdong" selected>Guangdong</mat-option>
+                                         <mat-option value="option" disabled>Guizhou</mat-option>
+                                         <mat-option value="option" disabled>Hainan</mat-option>
+                                         <mat-option value="option" disabled>Hebei</mat-option>
+                                         <mat-option value="option" disabled>Heilongjiang</mat-option>
+                                         <mat-option value="option" disabled>Henan</mat-option>
+                                         <mat-option value="option" disabled>Hubei</mat-option>
+                                         <mat-option value="option" disabled>Hunan</mat-option>
+                                         <mat-option value="option" disabled>Jiangsu</mat-option>
+                                         <mat-option value="option" disabled>Jiangxi</mat-option>
+                                         <mat-option value="option" disabled>Jilin</mat-option>
+                                         <mat-option value="option" disabled>Liaoning</mat-option>
+                                         <mat-option value="option" disabled>Qinghai</mat-option>
+                                         <mat-option value="option" disabled>Shaanxi</mat-option>
+                                         <mat-option value="option" disabled>Shandong</mat-option>
+                                         <mat-option value="option" disabled>Shanghai</mat-option>
+                                         <mat-option value="option" disabled>Shanxi</mat-option>
+                                         <mat-option value="option" disabled>Sichuan</mat-option>
+                                         <mat-option value="option" disabled>Tianjin</mat-option>
+                                         <mat-option value="option" disabled>Yunnan</mat-option>
+                                         <mat-option value="option" disabled>Zhejiang</mat-option>
+                                         <mat-option value="option" disabled>Other Region</mat-option>
+                                     </mat-select>
+                                 </mat-form-field>
+                               </div>
+                               <div class="small-width help-tooltip">
+                                 <mat-form-field>
+                                   <input matInput placeholder="City" value="For Guangzhou only" disabled>
+                                 </mat-form-field>
+                                 <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                                 <div class="help-text">This form is only for Guangzhou only. For the other city, please click here</div>
+                               </div>
+                               <div class="small-width">
+                                 <mat-form-field>
+                                     <input matInput placeholder="Postal code" allowNumber="true" maxlength="6" type="text" formControlName="postCode2">
+                                 </mat-form-field>
+                                 <span class="alertLogin" *ngIf="!contactForm.controls['postCode2'].valid && contactForm.controls['postCode2'].touched &&contactForm.value.postCode2!=null">Please enter the valid Reference ID</span>
+                                 <span class="alertLogin" *ngIf="contactForm.value.postCode2==null && contactForm.controls['postCode2'].touched">Sorry this is a required Field</span>            
+                               </div>
+                             </div>
+                           </div>
+                           <div class="pickup-address">
+                             Pickup address is the same as the billing address?
+                           </div>
+                   
+                           <mat-radio-group>
+                             <mat-radio-button value="1" (click)="setShowpickupOption('yes')">Yes</mat-radio-button>
+                             <mat-radio-button value="2" (click)="setShowpickupOption('no')">No</mat-radio-button>
+                           </mat-radio-group>
+                           <div class="row" *ngIf="showpickupOption=='no'">
+                               
+                             <br /><br />
+                             <mat-form-field>
+                               <input matInput placeholder="Pickup address" type="text" formControlName="shipAdr">
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['shipAdr'].valid && contactForm.controls['shipAdr'].touched &&contactForm.value.shipAdr!=null">Please enter valid billing address</span>
+                             <span class="alertLogin" *ngIf="contactForm.value.shipAdr==null && contactForm.controls['shipAdr'].touched">Sorry, this is a required field.</span>
+                             <div class="small-width province-dropdown">
+                               <mat-form-field>
+                                   <mat-select placeholder="Province" [(value)]="selected">
+                                       <mat-option value="option" disabled>Anhui</mat-option>
+                                       <mat-option value="option" disabled>Beijing</mat-option>
+                                       <mat-option value="option" disabled>Chongqing</mat-option>
+                                       <mat-option value="option" disabled>Fujian</mat-option>
+                                       <mat-option value="option" disabled>Gansu</mat-option>
+                                       <mat-option value="Guangdong" selected>Guangdong</mat-option>
+                                       <mat-option value="option" disabled>Guizhou</mat-option>
+                                       <mat-option value="option" disabled>Hainan</mat-option>
+                                       <mat-option value="option" disabled>Hebei</mat-option>
+                                       <mat-option value="option" disabled>Heilongjiang</mat-option>
+                                       <mat-option value="option" disabled>Henan</mat-option>
+                                       <mat-option value="option" disabled>Hubei</mat-option>
+                                       <mat-option value="option" disabled>Hunan</mat-option>
+                                       <mat-option value="option" disabled>Jiangsu</mat-option>
+                                       <mat-option value="option" disabled>Jiangxi</mat-option>
+                                       <mat-option value="option" disabled>Jilin</mat-option>
+                                       <mat-option value="option" disabled>Liaoning</mat-option>
+                                       <mat-option value="option" disabled>Qinghai</mat-option>
+                                       <mat-option value="option" disabled>Shaanxi</mat-option>
+                                       <mat-option value="option" disabled>Shandong</mat-option>
+                                       <mat-option value="option" disabled>Shanghai</mat-option>
+                                       <mat-option value="option" disabled>Shanxi</mat-option>
+                                       <mat-option value="option" disabled>Sichuan</mat-option>
+                                       <mat-option value="option" disabled>Tianjin</mat-option>
+                                       <mat-option value="option" disabled>Yunnan</mat-option>
+                                       <mat-option value="option" disabled>Zhejiang</mat-option>
+                                       <mat-option value="option" disabled>Other Region</mat-option>
+                                   </mat-select>
+                               </mat-form-field>
+                             </div>
+                             <div class="small-width help-tooltip">
+                               <mat-form-field>
+                                 <input matInput placeholder="City" value="For Guangzhou only" disabled>
+                               </mat-form-field>
+                               <div class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></div>
+                               <div class="help-text">This form is only for Guangzhou only. For the other city, please click here</div>
+                             </div>
+                             <div class="small-width">
+                               <mat-form-field>
+                                 <input matInput placeholder="Postal code" allowNumber="true" maxlength="6" type="text" formControlName="postCode3">
+                             </mat-form-field>
+                             <span class="alertLogin" *ngIf="!contactForm.controls['postCode3'].valid && contactForm.controls['postCode3'].touched &&contactForm.value.postCode3!=null">Please enter the valid Reference ID</span>
+                               <span class="alertLogin" *ngIf="contactForm.value.postCode3==null && contactForm.controls['postCode3'].touched">Sorry, this is a required field</span>            
+                             </div>
+                           </div>
+                       </div>
+                       <!-- <button type="submit" (click)="onSubmit()">{{buttonName}}</button> -->
+                
+       
+                          
+                           <!-- <button class="buttonStyle"    (click)="showDialog()" *ngIf='(userName || mobileNumber1||mobileNumber2 || email|| landLine ) &&!showInduvidualForignerErrorMessag' >
+                                   PLEASE CLICK TO READ AND AGREE AUTHORIZATION AND PRIVACY STATEMENT BEFORE SUBMISSION
+                                 </button> -->
+                
+                
+                       <div class="continue-button" *ngIf='!bothvalidForms '>
+                               <button class="fedex-button fedex-button-orange" 
+                               type="submit" (click)="validateContinue()" 
+                               >Continue</button>
+                           </div>
+       
+                           
+       <!-- 
+                           <div class="continue-button"  *ngIf='!bothvalidForms'>
+                               <button 
+                               class="fedex-button fedex-button-orange" 
+                               [disabled]="detailsForm.invalid" 
+                               type="button" 
+                               (click)="validateForm1()" 
+                               id="showhide" data-toggle="modal">Continue</button>
+                           </div> -->
+       
+                   </div>
+                   <div class="disableBillingShipping"  *ngIf='!bothvalidForms'>
+                       <span>Billing Information</span>
+                       <span>Shipping Needs</span>
+                   </div>
+                   </form>
+               
+       <!-- Billing -->
+       <div id="Billing-Shipping" class="showBillingShipping" *ngIf='bothvalidForms'  >
+           <!-- <div id="Billing-Shipping"  *ngIf='bothvalidForms' > -->
+       <div class="billing-section">
+           <h3>Billing Information</h3>
+           
+           <div class="billing-container">        
+               <div class="half-width">
+                 <mat-form-field>
+                   <input matInput placeholder="Bank name" type="text" formControlName="bankName" maxlength=30>
+                 </mat-form-field>
+                 <!-- <span class="alertLogin" *ngIf="!contactForm.controls['userName'].valid && contactForm.controls['userName'].touched &&contactForm.value.userName!=null">Invalid format/data entry. Please re-enter your information.</span> -->
+                      <span class="alertLogin" *ngIf="billingForm.value.bankName==null && billingForm.controls['bankName'].touched">Sorry, this is a required field.</span>
+               </div>
+               <div class="half-width">
+                 <mat-form-field>
+                   <input matInput placeholder="Bank account number" maxlength="40" allowNumber="true" type="text" formControlName="bankNum" >
+                 </mat-form-field>
+                 <!-- <span class="alertLogin" *ngIf="!contactForm.controls['bankNum'].valid && contactForm.controls['bankNum'].touched &&contactForm.value.bankNum!=null">Please enter the valid phone number.</span> -->
+                      <span class="alertLogin" *ngIf="billingForm.value.bankNum==null && billingForm.controls['bankNum'].touched">Please enter the valid phone number.</span>
+               </div>
+               
+               <div class="tick-box">
+                 <mat-checkbox> Please tick the box if the majority of the transportation charges are billed to this corporate account.</mat-checkbox>
+               </div>
+       
+               <div class="tax-payer help-tooltip">
+                 TYPE OF TAX PAYER
+                 <span class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></span>
+                 <div class="help-text"> If you do not know this information, please consult your accounting department or visit the website of the State Administration of Taxation http://12366.chinatax.gov.cn/WsbsBLH_wsbsMain.do  or call 12366 Taxpayer Service Hotline to provide the taxpayer name and taxpayer identification number to get assistance from the local tax office.</div>
+               </div>
+               <mat-radio-group>
+                 <mat-radio-button value="1">General Tax Payer &nbsp; </mat-radio-button>
+                 <mat-radio-button value="2" >Small Scale Tax Payer</mat-radio-button>
+               </mat-radio-group>
+               <div class="billing-statment">
+                 BILLING STATEMENTS DELIVERY METHOD
+               </div>
+               
+               <mat-radio-group>
+               <mat-radio-button value="by email" (click)="setShowEmailField('no')">By Email &nbsp; </mat-radio-button>
+               <mat-radio-button value="by post" (click)="setShowEmailField('yes')">By Postal (Billing address will be used)</mat-radio-button>
+             </mat-radio-group>
+               
+               
+               <br /><br />
+               <div class="row" *ngIf="showEmailField=='no'">
+                 <div class="half-width">
+                   <mat-form-field>
+                     <input matInput placeholder="EMAIL ADDRESS 1" type="email" formControlName="emailB1" maxlength="50">
+                   </mat-form-field>
+                   <span class="alertLogin" *ngIf="!billingForm.controls['emailB1'].valid && billingForm.controls['emailB1'].touched  && billingForm.value.emailB1!=null">Please enter a valid email address.</span>
+                                           
+                   <span class="alertLogin" *ngIf="billingForm.value.emailB1==null && billingForm.controls['emailB1'].touched">Sorry, this is a required field.</span>
+                 </div>
+                 <div class="half-width">
+                   <mat-form-field>
+                       
+                       
+                     <input matInput placeholder="EMAIL ADDRESS 2 (OPTIONAL)" type="email" formControlName="emailB2" maxlength="50">
+                   </mat-form-field>
+                   <span class="alertLogin" *ngIf="!billingForm.controls['emailB2'].valid && billingForm.controls['emailB2'].touched  && billingForm.value.emailB2!=null">Please enter a valid email address.</span>
+                                           
+                 </div>
+                 
+               </div>
+           </div>
+         </div>
+       
+           <div class="shipping-section">
+             <h3>Shipping Needs</h3>
+             <!-- <form [formGroup]="shippingForm"> -->
+             <div class="shipping-container">        
+                 
+                 <div class="tick-box help-tooltip">
+                   <mat-checkbox> Please tick the box if you have any shipments within a week. Our customer service will contact you shortly. <span class="help-icon"><img src="../../assets/images/icon-help.svg" alt="help icon"/></span></mat-checkbox>
+                   <div class="help-text">We totally understand your needs and will offer you a temporary credit for your first shipment while we are processing your monthly credit application. To enjoy this special service, upon your shipment pickup, please submit all the required documents as instructed to FedEx courier.</div>
+                 </div>
+         
+                 <div class="shipping-statment">
+                   Please specify below if you have any special shipping needs
+                 </div>
+                 <mat-form-field>
+                   <input matInput placeholder="(OPTIONAL)" type="text" formControlName="needs" maxlength="100">
+                 </mat-form-field>
+             </div>
+           <!-- </form -->
+         </div>
+       
+       
+           <div class="review-button">
+                   <button class="fedex-button fedex-button-orange" type="submit"  (click)="validateReview()"   >Review</button>
+               </div>
+               
+               <!-- type="submit"  (click)="showDialog()"  id="showhide" data-toggle="modal" data-target="#errorModal" -->
+       
+           </div>
+       
+           </form>
+       
+       
+       </div>
+       
+       <!-- Yes No Modal -->
+       <div class="modal " id="errorModal" role="dialog">
+               <div class="modal-dialog">
+                   <div class="modal-content">
+                       <span class="pull-right" data-dismiss="modal"><img src="../../../assets/images/icon-close-error.svg" class="close-erro-icon" alt="Close"/></span>
+                       <div class="errormsg">
+                           <img src="../../../assets/images/icon-exclamatory.svg" class="exclamatory-icon" alt="Error Message"/>
+                           <span class="error-text">Please complete all required fields</span>
+                       </div>                
+                   </div>            
+               </div>
+           </div>
+       
+           <a class="disp1" id="errorModal_ID" data-toggle="modal" href='#errorModal'></a>

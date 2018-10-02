@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116">
+    <defs>
+        <style>
+            /* Hide all of the icons first. */
+            .icon {
+                display: none;
+            }
+
+            .icon--small {
+                display: block;
+            }
+
+
+            /* Display the desired icon and hide the others according to the viewport's size. */
+            @media screen and (min-width: 100px) {
+
+                .icon--large {
+                    display: block;
+                }
+
+                .icon--small {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 69px){
+                .icon--small * {
+                    stroke-width: 3;
+                }
+            }
+        </style>
+    </defs>
+
+
+    <g class="icon icon--large">
+<polyline points="73.85 91.8 73.85 110.97 32.15 110.97 32.15 91.8" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="32.15 20.49 32.15 1.03 73.85 1.03 73.85 20.76" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="52.63" cy="56" r="40.87" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="62.13 29.51 50.71 55.02 62.13 75.12" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="93.66 48.42 100.25 48.42 100.25 63.58 93.66 63.58" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="88.08" x2="53" y2="96.66" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="20.92" y1="56" x2="12.34" y2="56" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="23.92" x2="53" y2="15.34" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="85.08" y1="56" x2="92.66" y2="56" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="3.72" x2="53" y2="4.72" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="9.72" x2="53" y2="10.9" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="108.31" x2="53" y2="107.31" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="102.31" x2="53" y2="101.13" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+
+    <g class="icon icon--small">
+<polyline points="73.85 91.8 73.85 110.97 32.15 110.97 32.15 91.8" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="32.15 20.49 32.15 1.03 73.85 1.03 73.85 20.76" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="52.63" cy="56" r="40.87" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="62.13 29.51 50.71 55.02 62.13 75.12" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="93.66 48.42 100.25 48.42 100.25 63.58 93.66 63.58" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="88.08" x2="53" y2="96.66" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="20.92" y1="56" x2="12.34" y2="56" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="53" y1="23.92" x2="53" y2="15.34" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="85.08" y1="56" x2="92.66" y2="56" fill="none" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+</svg>

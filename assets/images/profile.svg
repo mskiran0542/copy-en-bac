@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116">
+    <defs>
+        <style>
+            /* Hide all of the icons first. */
+            .icon {
+                display: none;
+            }
+
+            .icon--small {
+                display: block;
+            }
+
+
+            /* Display the desired icon and hide the others according to the viewport's size. */
+            @media screen and (min-width: 100px) {
+
+                .icon--large {
+                    display: block;
+                }
+
+                .icon--small {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 69px){
+                .icon--small * {
+                    stroke-width: 3;
+                }
+            }
+        </style>
+    </defs>
+
+<g class="icon icon--large">
+    <circle cx="56" cy="56" r="55" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" class="smallstroke" /><circle cx="56" cy="49.63" r="18.33" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" class="smallstroke" /><path d="M23.09,99.83s1.4-7,3.1-15.81,10.43-15.81,19.4-15.81H67c9,0,17.69,7,19.4,15.81s3.1,15.89,3.1,15.89" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></g>
+<g class="icon icon--small">
+    <circle cx="56" cy="56" r="55" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" class="smallstroke" /><circle cx="56" cy="49.63" r="18.33" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" class="smallstroke" /><path d="M23.09,99.83s1.4-7,3.1-15.81,10.43-15.81,19.4-15.81H67c9,0,17.69,7,19.4,15.81s3.1,15.89,3.1,15.89" fill="none" stroke="#58595B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></g>
+
+
+
+</svg>

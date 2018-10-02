@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116">
+    <defs>
+        <style>
+            /* Hide all of the icons first. */
+            .icon {
+                display: none;
+            }
+
+            .icon--small {
+                display: block;
+            }
+
+
+            /* Display the desired icon and hide the others according to the viewport's size. */
+            @media screen and (min-width: 100px) {
+
+                .icon--large {
+                    display: block;
+                }
+
+                .icon--small {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 69px){
+                .icon--small *{
+                    stroke-width: 3;
+                }
+            }
+        </style>
+    </defs>
+
+
+    <g class="icon icon--large">
+<path d="M55,38.69a1.24,1.24,0,1,0-1.24,1.26A1.21,1.21,0,0,0,55,38.69m-1.57.06v.83h-.27V37.75h.67c.39,0,.57.17.57.5a.38.38,0,0,1-.32.39h0c.15,0,.21.16.25.41a1.7,1.7,0,0,0,.11.51h-.32A5.69,5.69,0,0,1,54,39a.27.27,0,0,0-.31-.21Zm.33-.24c.26,0,.34-.14.34-.26S54,38,53.75,38h-.33v.52Zm-1.54.17a1.54,1.54,0,1,1,1.54,1.51,1.5,1.5,0,0,1-1.54-1.51" fill="#4d148c"/><path d="M47,35.79l3.69-4.11H46.34l-1.5,1.7-1.56-1.7H35.07v-1.1H39v-3.3H28.49v5.18h0a3,3,0,0,0-2.45-1,4.12,4.12,0,0,0-4,3.08,4.26,4.26,0,0,0-4.38-3.12,4.46,4.46,0,0,0-4,2.16V31.9H9.82V30.1H14V27.28H6.43V39.93H9.82V34.61H13.2A5,5,0,0,0,13,35.86a4.44,4.44,0,0,0,4.63,4.49A4.36,4.36,0,0,0,22,37.49h-2.9a1.46,1.46,0,0,1-1.48.72A1.74,1.74,0,0,1,16,36.49h5.91A4.28,4.28,0,0,0,26,40.39a2.9,2.9,0,0,0,2.41-1.28h0v.82H43.18l1.53-1.72,1.58,1.72h4.46Zm-30.9-1.14a1.63,1.63,0,0,1,1.6-1.33,1.55,1.55,0,0,1,1.62,1.33ZM26.68,38a1.92,1.92,0,0,1-1.78-2.08c0-1.14.59-2.23,1.78-2.23s1.73,1.09,1.73,2.23S27.89,38,26.68,38m11.61,1.31H31.76V27.9h6.57V30H34.45v2.33h3.84v1.93H34.41v3.07h3.88Zm-3.18-2.73V34.91H39v-3L42.5,35.8,39,39.71V36.59Zm9.59.71-1.8,2H40.26l3.15-3.51-3.15-3.51H43l1.84,2,1.77-2h2.66l-3.14,3.5,3.18,3.53h-2.8Z" fill="#4d148c"/><ellipse cx="88.9" cy="80.15" rx="4.41" ry="4.37" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><ellipse cx="21.48" cy="80.15" rx="4.41" ry="4.37" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><path d="M99.39,79.91H111l0-1.45V61.16c0-.71.19-1.49-.47-1.75l-8.22-3.66-8.8-19.32c-.25-.56-.52-1.2-1.14-1.2h-26a2.25,2.25,0,0,0-1.79,2" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="102.22" y1="79.91" x2="109.26" y2="79.91" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><path d="M11.21,79.91H1V21.49H64.58l-.11,57A1.43,1.43,0,0,0,66,79.91H77.76" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="77.17" y1="79.91" x2="31.83" y2="79.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="89.08" cy="80.2" r="10.31" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><circle cx="21.52" cy="80.2" r="10.31" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><polyline points="102.38 55.85 78.64 55.85 76.61 55.85 76.61 55.64 76.61 35.67" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>    </g>
+
+    <g class="icon icon--small">
+<path d="M99.39,79.91H111l0-1.45V61.16c0-.71.19-1.49-.47-1.75l-8.22-3.66-8.8-19.32c-.25-.56-.52-1.2-1.14-1.2h-26a2.25,2.25,0,0,0-1.79,2" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="102.22" y1="79.91" x2="109.26" y2="79.91" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><path d="M11.21,79.91H1V21.49H64.58l-.11,57A1.43,1.43,0,0,0,66,79.91H77.76" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="77.17" y1="79.91" x2="31.83" y2="79.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="89.08" cy="80.2" r="10.31" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><circle cx="21.52" cy="80.2" r="10.31" fill="none" stroke="#4d148c" stroke-miterlimit="10" stroke-width="2"/><polyline points="102.38 55.85 78.64 55.85 76.61 55.85 76.61 55.64 76.61 35.67" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>    </g>
+</svg>

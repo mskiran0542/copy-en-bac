@@ -1,0 +1,184 @@
+<div class="bac-account container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="reviewaccount">
+                <h2>Open a Corporate Account (Pay Via 30 Days Credit Term)</h2>
+                <!-- Responsive Arrow Progress Bar -->
+                <div class="arrow-steps">
+                <div class="step current"></div>
+                <div class="step current"></div>
+                <div class="step"></div>
+                </div>
+                <!-- end Responsive Arrow Progress Bar -->
+                <div class="progressbar-labels">
+                    <div class="labels disable-mob">
+                        1. Fill in the form
+                    </div>
+                    <div class="labels current">
+                        2. Review and Submit
+                    </div>
+                    
+                    <div class="labels disable-mob">
+                        3. Complete your application
+                    </div>
+                </div>
+            </div>
+            <div class="info-text">
+                Please review the information you have provided before submitting. Application will not be process if the information is incorrect or incomplete.
+            </div>
+            <!-- Contact Info -->
+            <div class="review-info">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h3>Contact Information</h3>
+                        <div class="info-row">
+                            <div class="title-box">
+                                <label>Title</label>
+                                <span>{{title}}</span>
+                            </div>
+                            <div class="full-name-box">
+                                <label>Full Name (As shown on ID)</label>
+                                <span>{{fname}}</span>
+                            </div>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Position In Company</label>
+                            <span>{{position}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Email</label>
+                            <span>{{email}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <h3 class="hidden-xs">&nbsp;</h3>    
+                        <div class="info-row">                                
+                            <label>Mobile Number 1</label>
+                            <span>{{num1}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Landline Number</label>
+                            <span>{{land}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Mobile Number 2 (Optional)</label>
+                            <span>{{num2}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="edit-button" (click)="contactEdit()">
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Company Info -->
+            <div class="review-info">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h3>Company Information</h3>
+                        <div class="info-row">                                
+                            <label>Company Name in Chinese (As shown on Business Licence document)</label>
+                            <span>{{cmpcn}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Company Name in English (Pinyin Name when there is no English Name)</label>
+                            <span>{{cmpen}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Tax payer Identification Number/Unified Social Credit Code</label>
+                            <span>{{taxid}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Type of Business License</label>
+                            <span>{{bustype}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Nature of Business</label>
+                            <span>{{busnature}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <h3 class="hidden-xs">&nbsp;</h3>    
+                        <div class="info-row">                                
+                            <label>Company Address on the Business License</label>
+                            <span>{{cmpbil}}{{cmpadr}}{{cmppostal}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Billing Address</label>
+                            <span>{{biladr}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Reason</label>
+                            <span>{{bilreason}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Pickup Address</label>
+                            <span>{{shipadr}}{{shippostal}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="edit-button" (click)="contactEdit()">
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Billing Info -->
+                <div class="review-info">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h3>Billing Information</h3>
+                        <div class="info-row">                                
+                            <label>Bank Name</label>
+                            <span>{{bankname}}</span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Bank Account Number</label>
+                            <span>{{banknum}}</span>
+                        </div>                            
+                    </div>
+                    <div class="col-sm-5">
+                        <h3 class="hidden-xs">&nbsp;</h3>    
+                        <div class="info-row">                                
+                            <label>Type of tax payer</label>
+                            <span></span>
+                        </div>
+                        <div class="info-row">                                
+                            <label>Billing statements delivery method</label>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="edit-button" (click)="contactEdit()">
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shipping Info -->
+                <div class="review-info">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h3>Shipping Needs</h3>
+                        <div class="info-row">                                
+                            <label>Shipping needs</label>
+                            <span>{{needs}}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                       <h3 class="hidden-xs">&nbsp;</h3>                            
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="edit-button" (click)="contactEdit()">
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review-button final-submit">
+            <button class="fedex-button fedex-button-orange" type="submit" (click)="gotoCompletion()">Submit</button>
+        </div>
+    </div>
+</div>

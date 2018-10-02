@@ -1,0 +1,42 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112"><title>working 2</title>
+
+<defs>
+    <style>
+        /* Hide all of the icons first. */
+        .icon {
+            display: none;
+        }
+
+        .icon--small {
+            display: block;
+        }
+
+
+        /* Display the desired icon and hide the others according to the viewport's size. */
+        @media screen and (min-width: 100px) {
+
+            .icon--large {
+                display: block;
+            }
+
+            .icon--small {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 69px){
+            .icon--small * {
+                stroke-width: 3;
+            }
+        }
+    </style>
+</defs>
+
+<g class="icon icon--large">
+<rect x="1" y="47.74" width="57.55" height="12.12" rx="0.48" ry="0.48" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="100.95" y1="31.26" x2="76.37" y2="12.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="25.23" y1="31.26" x2="49.81" y2="12.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="23.72" y1="68.94" x2="38.86" y2="68.94" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="25.23 47.74 25.23 31.26 100.95 31.26 100.95 72.01" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="70.81" y1="90.15" x2="55.52" y2="90.15" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M55.52,59.86H4v38H55.52v-38H7.06" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><rect x="1" y="47.74" width="57.55" height="12.12" rx="0.48" ry="0.48" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M84.35,99.09H97.46a13.56,13.56,0,0,0,0-27.12H84.35" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="84.35" cy="85.55" r="13.54" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><ellipse cx="84.35" cy="85.55" rx="7.23" ry="7.03" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="20.69" y1="68.94" x2="38.86" y2="68.94" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</g>
+<g class="icon icon--small">
+<rect x="1" y="47.74" width="57.55" height="12.12" rx="0.48" ry="0.48" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="100.95" y1="31.26" x2="76.37" y2="12.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="25.23" y1="31.26" x2="49.81" y2="12.91" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="23.72" y1="68.94" x2="38.86" y2="68.94" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline points="25.23 47.74 25.23 31.26 100.95 31.26 100.95 72.01" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="70.81" y1="90.15" x2="55.52" y2="90.15" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M55.52,59.86H4v38H55.52v-38H7.06" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><rect x="1" y="47.74" width="57.55" height="12.12" rx="0.48" ry="0.48" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M84.35,99.09H97.46a13.56,13.56,0,0,0,0-27.12H84.35" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="84.35" cy="85.55" r="13.54" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><ellipse cx="84.35" cy="85.55" rx="7.23" ry="7.03" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="20.69" y1="68.94" x2="38.86" y2="68.94" fill="none" stroke="#4d148c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</g>
+
+</svg>

@@ -1,0 +1,1069 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    background: #fff;
+    margin: 0;
+    color: #58595b;
+    width: 100%;
+    overflow-x: hidden;    
+    line-height: 1.15;
+	padding-top:75px;
+}
+.hero-image{
+	position: relative;	
+	background-image: url('assets/images/banner-image-small.jpg');
+	min-height: 350px;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.hero-text-section{
+	max-width: 970px;
+	margin: 0 auto;
+	color: #fff;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-left: 15px;
+}
+.hero-text {
+    font-size: 45px;
+    font-weight: 300;
+}
+.hero-text-small{
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+	max-width: 420px;
+	padding-left: 5px;
+}
+.account-section{
+	max-width:970px;
+	margin: 0 auto;
+	display: table;
+	position: relative;
+}
+.account-section .account-box{
+	width: 296px;
+	height: 267px;
+	margin: 0 10px 10px 0;
+	float: left;
+	padding: 0 20px;
+	text-align: center;
+	color: #58595b;
+}
+.account-box img{
+	padding-bottom: 15px;
+    margin: 0 auto;
+    display: block;
+}
+.account-box h3{
+	font-size: 26px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+.account-box h4{
+	font-size: 16px;
+	margin: 0;
+	padding-bottom: 10px;
+}
+.account-box h5{
+	font-size: 12px;
+	margin: 0;
+	padding-bottom: 20px;
+}
+.rounded-button{
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 17px 30px;
+	border: 2px solid #007ab7;
+	border-radius: 40px;
+	color: #007ab7;
+	text-transform: uppercase;
+	height: 50px;
+	background-color: inherit;
+}
+.account-box a.learn-more{
+	color: #007ab7;
+	text-transform: uppercase;
+	display: block;
+	padding-top: 15px;
+	font-size: 14px;
+}
+.container.bac-wrapper{
+    width: 970px;
+	padding-top: 50px;
+	padding-left: 0;
+}
+a.accordion-header{
+	display: inline-block;
+    border-top: solid 1px #e2e2e2;
+    width: 100%;
+    min-height: 60px;
+    padding: 20px;
+    font-size: 18px;
+    color: #5a5b5d;
+	text-decoration: none;	
+    position: relative;
+}
+.accordion-header:last-child{
+	border-bottom: solid 1px #e2e2e2;
+}
+.down-arrow{
+	background-image: url('assets/images/dropdown-arrow-down.png');
+    width: 18px;
+    background-repeat: no-repeat;
+}
+.up-arrow{
+	background-image: url('assets/images/dropdown-arrow-up.png');
+    width: 18px;
+    background-repeat: no-repeat;
+}
+a.accordion-header .down-arrow, a.accordion-header.collapsed .up-arrow{
+	display: none;
+	float: right;
+}
+a.accordion-header.collapsed .down-arrow, a.accordion-header .up-arrow{
+	display: block;
+	float: right;
+	position: absolute;
+	top: 25px;
+	right: 0;
+	right: 20px;
+}
+.accordion-description{
+	padding: 0 40px;
+	font-size: 14px;
+}
+.easy-steps, .exclusive-benefits{
+	padding: 55px 0px 40px 0px;
+	border-bottom: solid 1px #e2e2e2;
+	color: #5a5b5d;
+	text-align: center;
+}
+.easy-steps  h1, .exclusive-benefits h1{
+	color: #5a5b5d;
+	font-size: 38px;
+	padding-bottom: 40px;	
+}
+.easy-steps  h3, .easy-steps  h4, .easy-steps  h1, .exclusive-benefits h4, .exclusive-benefits h1{
+	margin: 0;
+}
+.easy-steps  h3{
+	font-size: 24px;
+}
+.easy-steps  h4, .exclusive-benefits h4{
+	font-size: 16px;
+}
+.easy-steps img{
+	width: 80px;
+	padding: 15px 0px 15px 0px;
+}
+.exclusive-benefits img{
+	width: 60px;
+	padding: 5px 0px 15px 0px;
+}
+.fedex-scan{
+	padding: 40px 0px;
+}
+.fedex-scan .scan, .fedex-scan .chat{
+	margin-right: 35px;
+	float: right;
+}
+.fedex-scan .chat{
+	margin-right: -15px;
+	height: 47px;
+}
+footer.fxg-footer .fxg-copyright {
+    color: #5a5b5d;
+    padding: 25px 15px;
+	font-size: 14px;
+	background-color: #f2f2f2;
+}
+.fxg-footer div.fxg-copyright .fxg-title{
+	color: #58595b;
+}
+footer .fxg-copyright .fxg-link, footer.fxg-footer .fxg-copyright .link, footer .fxg-title{
+	color: #5a5b5d;
+	font-size: 14px;
+	font-weight: 500;
+}
+footer.fxg-footer {
+    background-color: #fff;
+    padding-top: 0px;
+}
+.readmore{
+    font-size: 14px;
+    color: #007ab7;
+    padding: 10px 0;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 30px;
+    text-transform: capitalize;
+}
+.readmore:hover{
+	text-decoration: underline;
+}
+/*popup box*/
+.yes-no-popup{
+	margin-top: 50%;
+	padding: 15px;
+}
+.yes-no-popup h3{
+	font-size: 24px;
+	color: #58595b;
+	padding: 20px 45px;	
+	text-align: center;
+	line-height: 1.1;
+}
+.buttons{
+	padding: 30px 45px;
+	text-align: center;
+}
+.fedex-button{
+	font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.11px;
+    line-height: 12px;
+    padding: 20px 60px;
+    border: 0;
+}
+.fedex-button-orange {
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff6200;
+    border-radius: 0;
+	text-decoration: none;
+	border: solid 2px #ff6200;
+	margin-right: 20px;
+}
+.fedex-button-orange-border {
+    font-size: 14px;
+    color: #fff;
+    border: solid 2px #ff6200;
+    border-radius: 0;
+	text-decoration: none;
+	background-color: #fff;
+	color: #ff6200;
+}
+.modal .modal-content{
+	border-radius: 0px;
+	border: none;
+}
+.accordion-description h4{
+	font-size: 16px;
+	color: #333;
+	font-weight: 300;
+}
+.accordion-description li{
+	font-size: 16px;
+	color: #5a5b5d;
+}
+.accordion-description p {
+    padding: 10px 25px;
+    font-size: 16px;
+}
+.accordion-description div a{
+	font-size: 16px;
+    text-transform: uppercase;
+    padding: 25px 0px;
+    display: inline-block;
+}
+.no-cursor{
+	cursor: auto;
+}
+.close-icon{
+	cursor: pointer;
+}
+/*Open account start*/
+.container.bac-account{
+	width: 970px;
+    padding-left: 0;
+}
+.openaccount{
+	padding-bottom: 30px;
+}
+.openaccount h2{
+	font-size: 24px;
+	text-align: center;
+	line-height: 1.4;
+}
+.arrow-steps{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 8px 4px 0;
+}
+.arrow-steps .step {
+	text-align: center;
+	width: 33%;
+	float: left;
+	height: 15px;
+	position: relative;
+	background-color: #f2f2f2;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: -9px;
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+    border-bottom: 8px solid transparent;
+	border-left: 9px solid #ddd;
+	z-index: 2;
+}
+
+.arrow-steps .step:before {
+	right: auto;
+	left: 0;
+	border-left: 9px solid #fff;
+	z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+	border: none;
+}
+
+.arrow-steps .step:last-child:after {
+	border: none;
+}
+
+.arrow-steps .step:first-child {
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+}
+
+.arrow-steps .step:last-child {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.arrow-steps .step.current {
+	background-color: #4d148c;
+}
+
+.arrow-steps .step.current:after {
+	border-left: 9px solid #4d148c;
+    right: -9px;
+}
+
+.arrow-steps .step.step2-default {
+    background-color: #ddd;
+}
+.progressbar-labels{
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+.progressbar-labels .labels{
+	float: left;
+	font-size: 12px;
+	color: #999;
+	font-weight: 500;
+	text-align: left;
+	width: 33%;
+    padding: 2px 5px;
+}
+.labels.current {
+    color: #333;
+}
+.info-text{
+	color: #4d148c;
+	font-size: 16px;
+	padding-top: 10px;
+}
+.mat-form-field.mat-focused .mat-form-field-label {
+	color: #4d148c;
+	font-size: 12px;
+}
+.mat-form-field .mat-form-field-label {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    font-size: 12px;
+}
+.mat-form-field .mat-input-element{
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 24px;
+}
+.mat-form-field-underline{
+	background: none;
+}
+.mat-form-field.mat-focused{
+	border-left: solid 2px #4d148c;	
+}
+.mat-focused .mat-form-field-underline .mat-form-field-ripple, .mat-form-field-ripple{ 
+	background: #f2f2f2;
+}
+.mat-form-field {
+    background: #f2f2f2;
+    height: 60px;
+	vertical-align: top;
+	padding: 10px 15px;
+	margin-bottom: 2px;
+}
+.mat-select-arrow-wrapper .mat-select-arrow{
+	background: url("assets/images/dropdown-arrow-down.png") no-repeat;
+	width: 20px;
+    height: 12px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: 0;
+}
+.cdk-overlay-pane {
+    margin-top: 45px;
+}
+.mat-primary .mat-select-content .mat-option.mat-selected{
+	color: #666;
+	height: 60px;
+    background: #f2f2f2;
+}
+.mat-primary .mat-select-content .mat-option.mat-selected:not(.mat-option-disabled) {
+	color: #666;
+	height: 40px;
+    background: #f2f2f2;
+}
+.mat-select-panel .mat-select-content .mat-optgroup-label, .mat-select-panel .mat-select-content .mat-option{
+	height: 40px;
+	border-bottom: solid 1px #f2f2f2;
+}
+.mat-option.mat-active {
+	color: #666;
+    background: #fff;
+}
+.mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled) {
+    background: #fff;
+}
+.mat-option-text{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+}
+.mat-form-field .mat-error{
+	color: #e8002e;
+	font-size: 10px;
+    font-weight: normal;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+    background-color: inherit;
+}
+.mat-form-field.mat-form-field-invalid{
+	border-left: solid 2px #e8002e;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-subscript-wrapper{
+	margin-top: 0;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-label{
+	color: #e8002e;
+}
+.mat-form-field.mat-form-field-disabled .mat-form-field-underline{
+	background: none;
+}
+.mat-form-field.mat-form-field-disabled .mat-form-field-label{
+	color: #8e8e8e;
+}
+mat-radio-button.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #1284e6;
+}
+mat-radio-button.mat-radio-checked .mat-radio-inner-circle {
+    transform: scale(.7);
+}
+mat-radio-button.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #1284e6;
+}
+mat-radio-button .mat-radio-outer-circle {
+    border-width: 1px;
+}
+mat-radio-button .mat-radio-outer-circle {
+    border-color: #1284e6;
+}
+.mat-radio-button .mat-radio-label-content {
+    font-size: 14px;
+}
+.mat-checkbox .mat-checkbox-frame {
+	border-color: #1284e6;
+	border-radius: 0px;
+	border-width: 1px;
+}
+.mat-checkbox.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+	background-color: #fff;
+	border: solid 1px #1284e6;
+    border-radius: 0;
+}
+.mat-checkbox .mat-checkbox-checkmark-path {
+    stroke: #1284e6!important;
+}
+.mat-checkbox .mat-checkbox-layout .mat-checkbox-label {
+    font-size: 16px;
+}
+.mat-form-field-empty.mat-form-field-label {
+    margin-top:-5px;
+}
+.mat-focused .mat-form-field-empty.mat-form-field-label,.mat-form-field-should-float .mat-form-field-empty.mat-form-field-label {
+    margin-top: 0;
+}
+.mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 18px 0px rgba(0,0,0,.14), 0 21px 18px 2px #f2f2f2;
+}
+span.ng-star-inserted {
+	font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+}
+
+.help-tooltip{
+  position: relative;
+  padding-right: 40px;
+}
+.help-tooltip .help-icon{
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 40px;
+  height: 60px;
+  background: #f8f8f8;
+  padding-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.help-tooltip .help-text{
+  position: absolute;
+  top: 45px;
+  right: 2px;
+  padding: 20px;
+  z-index: 1;
+  background-color: #fafafa;
+  border-right: solid 2px #cfcfcf;
+  border-bottom: solid 2px #cfcfcf;
+  font-size: 14px;
+  word-break: break-word;
+  color: #333;
+  max-width: 250px;
+  display: none;
+}
+.help-icon img{
+  width: 20px;
+}
+.bac-account h3{
+    margin-top: 15px;
+	margin-bottom: 0px;
+}
+.review-button{
+	padding: 25px 0 30px;
+	text-align: center;	
+}
+.review-button button{
+	margin-right: 0;
+}
+label .mat-checkbox-inner-container {
+	vertical-align: top;
+	margin-top: 5px;
+}
+label.mat-checkbox-layout, label.mat-radio-label{
+	white-space: normal;
+}
+
+.mat-select-panel::-webkit-scrollbar {
+	width: 20px;
+}
+
+.mat-select-panel::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px #fff; 
+}
+ 
+.mat-select-panel::-webkit-scrollbar-thumb {
+	background: #f2f2f2;
+    border-left: 7px solid #fff;
+	border-right: 7px solid #fff; 
+	border-radius: 8.5px;
+}
+
+.mat-select-panel::-webkit-scrollbar-thumb:hover {
+    background: #f2f2f2;
+}
+.province-dropdown label.ng-star-inserted{
+    color: #8e8e8e;
+}
+.tick-box .help-icon{
+	position: relative;
+    margin-left: 10px;
+    vertical-align: text-top;
+}
+.disableBillingShipping span {
+    display: block;
+    padding: 15px 0;
+    border-top: solid 1px #e3e3e3;
+    font-size: 16px;
+    color: #e3e3e3;
+}
+.disableBillingShipping{	
+    margin-bottom: 30px;
+}
+.disableBillingShipping span:last-child{
+	border-bottom: solid 1px #e3e3e3;
+}
+.continue-button{
+	padding-bottom: 15px;
+	padding: 25px 0 15px;
+    text-align: center;
+}
+.continue-button button{
+	margin-right: 0;
+    background: #fff;
+    color: #ff6200;
+    display: inline-block;
+}
+
+/*global error modal start*/
+.exclamatory-icon{
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+}
+#errorModal{
+	top: 45%;
+}
+#errorModal.modal .modal-content {
+	max-width: 340px;
+    margin: 0 auto;
+}
+#errorModal .errormsg{
+    text-align: center;
+    color: #e8002e;
+    width: auto;
+    margin: 0 auto;
+    height: 135px;
+    padding-top: 60px;
+}
+#errorModal .error-text{
+	padding-left: 15px;
+	font-size: 16px;
+}
+#errorModal .close-erro-icon{
+	width: 17px;
+    height: 17px;
+    margin: 20px;
+}
+/*global error modal end*/
+
+/*Open account end*/
+
+/* Review and submit start*/
+.reviewaccount{
+	padding-bottom: 30px;
+}
+.reviewaccount h2{
+	font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+}
+.reviewaccount .arrow-steps .step.current:after {
+    border-left: 10px solid #4d148c;
+    right: -10px;
+}
+.review-info{
+	padding: 20px 0;
+	border-bottom: solid 1px #e3e3e3;
+}
+.review-info h3{
+	margin-top: 0;
+    padding-bottom: 25px;
+}
+.title-box{
+	float: left;
+	padding-right: 25px;
+}
+.full-name-box{
+	float: left;
+}
+.info-row{
+	overflow: auto;
+}
+
+.info-row label{
+	font-size: 12px;
+	color: #999;
+}
+.info-row span{
+	font-size: 16px;
+	color: #333;
+	display: block;
+	padding-bottom: 15px;
+	font-weight: 500;
+}
+.review-info .edit-button button{
+	width: 122px;
+    height: 40px;
+    background-color: #fff;
+    border: solid 2px #333;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+.final-submit{
+	clear: both;
+}
+/* Review and submit end*/
+
+/* Last completion start*/
+.completionaccount{
+	padding-bottom: 30px;
+}
+.completionaccount h2{
+	font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+}
+.completionaccount .arrow-steps .step.current:after {
+    border-left: 10px solid #4d148c;
+    right: -10px;
+}
+.reference-info{
+	font-size: 18px;
+	color:#333;
+	padding: 15px 0 20px;
+}
+.thank-you-title{
+	font-size: 30px;
+	color: #666;
+}
+.completion-section{
+	padding: 25px 0 20px;
+	overflow: auto;
+}
+.completion-box{
+	width: 315px;
+	height: 217px;
+	background: #e3e3e3;
+	color: #333;
+	padding: 15px;	
+	text-align: center;
+	float: left;
+}
+.completion-box p{
+	font-size: 14px;
+}
+.completion-box img{
+    width: 50px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+.review-button.download-btn{
+	padding: 0 0 10px;
+    text-align: center;
+}
+.upload-email{
+	background: #f2f2f2;
+}
+.upload-email h4{
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.upload-email p{
+	padding-top: 30px;
+}
+.notification{
+	background: #fafafa;
+}
+.notification p{
+	padding-top: 30px;
+}
+.note{
+	padding-bottom: 10px;
+    border-bottom: solid 1px #4d148c;
+}
+.note p{
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+.feedback-entry{
+	text-align: center;
+    padding: 20px 0 15px 0;
+}
+.feedback-entry p{
+	font-size: 20px;
+	padding-bottom: 5px;
+}
+.feedback-entry .starrating{
+	background: url("assets/images/icon-greystar.svg") no-repeat;
+	width: 30px;
+    height: 30px;
+	display: inline-block;
+	padding: 0 25px;
+}
+.feedback-entry .checked{
+	background: url("assets/images/icon-orangestar.svg") no-repeat;
+	width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.star-rating{
+	padding-bottom: 20px;
+}
+.feedback-entry .starrating:last-child{
+	padding-right: 0;
+}
+.about-your-exp{
+	width: 350px;
+	margin: 0 auto;
+	border: solid 1px #4d148c;
+}
+.about-your-exp textarea{
+	width: 100%;
+	font-size: 16px;
+	border: none;
+}
+#hide-box, #thankyou-msg{
+	display: none;
+}
+#thankyou-msg h3{
+    font-size: 35px;
+    color: #ff6200;
+    font-weight: 300;
+    padding-bottom: 12px;
+}
+#thankyou-msg span{
+	font-size: 20px;
+	color: #ff6200;
+	display: inline-block;
+	font-weight: 300;
+}
+
+/* Last completion end*/
+
+@media screen and (min-width: 768px){
+	.mat-radio-button .mat-radio-label-content {
+        white-space: nowrap;
+	}
+	.easy-steps, .exclusive-benefits{
+		margin: 0 15px;
+	}
+	
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+	.container.bac-wrapper {
+		width: auto;
+	}
+	.hero-text-section {
+		padding-left: 30px;
+	}
+	.account-box h3 {
+		font-size: 22px;
+	}
+	.account-box h4 {
+		font-size: 12px;
+	}
+	.account-box h5 {
+		font-size: 11px;
+	}
+	.rounded-button {
+		font-size: 12px;
+		padding: 10px 30px;
+	}
+	.account-box a.learn-more {
+		padding-top: 10px;
+		font-size: 12px;
+	}
+	.account-section .account-box {
+		width: 230px;
+		height: 240px;
+		padding: 15px 5px;
+	}
+	.yes-no-popup {
+		padding: 20px;
+		width: 480px;
+		height: 240px;
+	}
+	.yes-no-popup h3 {
+		padding: 4px 45px;
+	}
+	div.fedex-scan{
+		padding-right: 25px;
+	}
+	footer.fxg-footer {
+		padding-top: 30px;
+	}
+	div.accordion-section{
+		padding-right: 0;
+	}
+	/*Open account start*/
+	.container.bac-account {
+		width: auto;
+		padding: 0 15px;
+	}
+	/*Open account end*/
+}
+
+@media screen and (max-width:767px){
+	body{
+		padding-top:55px;
+	}
+	.hero-image{
+		border-top: solid 0px #4d148c;
+		min-height: 180px;
+		height: 180px;
+		position: relative;
+	}
+	.hero-text-section {
+		padding: 0px 15px;
+	}
+	.hero-text {
+		font-size: 36px;
+	}
+	.hero-text-small {
+		font-size: 16px;
+	}
+	.account-section .account-box{
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.container.bac-wrapper{
+		width: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	a.accordion-header{
+		padding-right: 40px;
+	}
+	.exclusive-benefits h4{
+		Margin-bottom: 20px;
+	}
+	.easy-steps .steps{
+		margin-bottom: 40px;
+	}
+	.exclusive-benefits .benefit{
+		margin-bottom: 20px;
+	}
+	.fedex-scan{
+		text-align: center;
+		display: flex;
+		display: -webkit-flex;
+		flex-flow: column;
+	}
+	.fedex-scan .chat{
+		float: none;
+		margin: 0 auto;	
+		order: 2;
+		-webkit-order: 2;
+	}
+	.fedex-scan .scan{
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		order: 1;
+		-webkit-order: 1;
+	}
+	div.accordion-section{
+		padding: 0;
+	}
+	.account-section {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.yes-no-popup {
+		width: 95%;
+		margin: 0 auto;
+		margin-top: 180px;
+	}
+	.buttons {
+		padding: 10px;
+	}
+	.fedex-button-orange {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+    	margin-bottom: 20px;
+	}
+	.yes-no-popup h3{
+		font-size: 20px;
+		padding: 10px 0;
+		text-align: center;
+		line-height: 1.1;
+	}
+	.fedex-button-orange-border{
+		padding: 20px 64px;
+	}
+	.accordion-description h4{
+		font-size: 16px;
+	}
+	.accordion-description li{
+		font-size: 14px;
+	}
+	.accordion-description p {
+		padding: 5px 15px;
+		font-size: 14px;
+		color: #333;
+	}
+	.accordion-description div a{
+		font-size: 14px;
+		padding: 15px 10px;
+	}
+
+	/*Open account start*/
+	.container.bac-account{
+		width: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.progressbar-labels .labels{
+		font-size: 10px;
+		white-space: nowrap;
+	}
+	.mat-form-field{
+		width: 100%;
+	}
+	.continue-button .fedex-button-orange, .review-button .fedex-button-orange{
+		width: 290px;
+	}
+	.review-button button {
+		margin-right: auto;
+	}
+	/*Open account end*/
+	.disable-mob{
+		display: none;
+	}
+	.edit-button{
+		text-align: center;
+	}
+	.edit-button button{
+		margin: 0 auto;
+		text-align: center;
+	}
+	.thank-you-title{
+		line-height: 32px;
+	}
+	.completion-box {
+		width: auto;
+		height: auto;
+		float: none;
+	}
+	.upload-email, .notification {
+		margin-top: 50px;
+	}
+	.about-your-exp{
+		width: auto;
+	}
+}
